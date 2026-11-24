@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Segoe UI", system-ui, sans-serif;
+
+  --color-brand-50: #fdf3f5;
+  --color-brand-100: #fbe4ea;
+  --color-brand-200: #f6c9d6;
+  --color-brand-300: #eea3b8;
+  --color-brand-400: #e17a98;
+  --color-brand-500: #c9748b;
+  --color-brand-600: #ad5570;
+  --color-brand-700: #8c435a;
+  --color-brand-800: #713849;
+  --color-brand-900: #5f313f;
+
+  --color-gold-400: #d8b26a;
+  --color-gold-500: #c79a4b;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-brand-50 text-brand-900 antialiased;
+    min-height: 100dvh;
+  }
+  input, select, textarea {
+    @apply outline-none;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
